@@ -1,4 +1,4 @@
-package MyMathLab;
+package Sandbox;
 
 import javax.swing.JOptionPane;
 
@@ -16,8 +16,6 @@ public class DataSiftTest {
 		sb.append("\nMode: ").append(data.getMode());
 
 		JOptionPane.showMessageDialog(null, sb);
-		
-		data.getDataFrequencies();
 
 	}
 

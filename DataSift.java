@@ -1,4 +1,4 @@
-package MyMathLab;
+package Sandbox;
 import javax.swing.JOptionPane;
 
 public class DataSift {
@@ -26,7 +26,7 @@ public class DataSift {
 	public String getMode()
 	{
 		// Set variable
-		int highest = 0;
+		double highest = 0;
 		StringBuilder sb = new StringBuilder();
 		
 		// Get highest frequency
@@ -34,7 +34,8 @@ public class DataSift {
 		{
 			if (this.dataFrequencies[1][x] > highest)
 			{
-				highest = (int) this.dataFrequencies[1][x];
+				highest = this.dataFrequencies[1][x];
+				System.out.println(highest);
 			}
 		}
 		
@@ -43,7 +44,7 @@ public class DataSift {
 		{
 			if (this.dataFrequencies[1][x] == highest)
 			{
-				sb.append(this.dataFrequencies[1][x]).append(", ");
+				sb.append(this.dataFrequencies[0][x]).append(", ");
 			}
 		}
 		
@@ -54,7 +55,7 @@ public class DataSift {
 	/**
 	 * The getDataFrequencies creates a 2 dimensional array of the data and their corresponding frequencies. 
 	 */
-	public void getDataFrequencies()
+	public void setDataFrequencies()
 	{
 		// Set variables
 		int countSize = 1; // To count the array size, always starts at 1
@@ -67,7 +68,6 @@ public class DataSift {
 				countSize++;
 			}
 		}
-		
 		// CountSize to frequencyLength
 		this.frequencyLength = countSize;
 		
@@ -246,6 +246,7 @@ public class DataSift {
 		
 		// Sort and organize data
 		this.sortData();
+		this.setDataFrequencies();
 		
 	} // End constructor
 	
